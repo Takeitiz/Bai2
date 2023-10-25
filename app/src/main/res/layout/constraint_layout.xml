@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3C3232"
+        android:paddingLeft="10dp"
+        android:text="LifeCycle"
+        android:textColor="#878787"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/FirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:text="First Name"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/LastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:text="Last Name"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/FirstName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintStart_toEndOf="@+id/FirstName" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/FirstNameEdit"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:hint="First Name"
+        app:layout_constraintStart_toStartOf="@+id/FirstName"
+        app:layout_constraintTop_toBottomOf="@+id/FirstName" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/LastNameEdit"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:hint="Last Name"
+        app:layout_constraintBottom_toBottomOf="@+id/FirstNameEdit"
+        app:layout_constraintStart_toStartOf="@+id/LastName"
+        app:layout_constraintTop_toBottomOf="@+id/LastName"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/FirstNameEdit"
+        app:layout_constraintTop_toBottomOf="@+id/FirstNameEdit"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/Gender"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Gender"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/Male"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/Female"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Birthday"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/Address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Address"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/BirthdayEdit"
+        app:layout_constraintTop_toBottomOf="@+id/BirthdayEdit" />
+
+    <EditText
+        android:id="@+id/BirthdayEdit"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Birthday"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/Birthday"
+        app:layout_constraintTop_toBottomOf="@+id/Birthday" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/AddressEdit"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/Address"
+        app:layout_constraintTop_toBottomOf="@+id/Address"
+        tools:ignore="DuplicateClickableBoundsCheck"/>
+
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Email"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/AddressEdit"
+        app:layout_constraintTop_toBottomOf="@+id/AddressEdit" />
+
+    <EditText
+        android:id="@+id/EmailEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/Email"
+        app:layout_constraintTop_toBottomOf="@+id/Email" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="I agree to Terms of Use"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/EmailEdit"
+        app:layout_constraintTop_toBottomOf="@+id/EmailEdit" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
